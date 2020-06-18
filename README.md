@@ -2,33 +2,32 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 
 ### Association
 - has_many :posts
-- has_many :images
+- has_many :groups_users
+- has_many :groups, through:  :groups_users
 
 ## groupsテーブル
 
 |Column|Type|Option|
 |------|----|------|
-|group_id|integer|null: false|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### Association
-- belong_to :user
-- has_many :groups_users
-- has_many :groups, through:  :groups_users
+- has_many :user
+- has_many :posts
+- has_many :groups_users, through:  :groups_users
 
 ## groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -40,7 +39,9 @@
 |------|----|-------|
 |text|text||
 |image|text||
-|user_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
+- belongs_to :group
