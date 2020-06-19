@@ -19,6 +19,7 @@
 
 ### Association
 - has_many :posts
+- has_many :groups_user
 - has_many :users, through:  :groups_users
 
 ## groups_usersテーブル
