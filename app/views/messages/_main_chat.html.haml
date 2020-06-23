@@ -1,0 +1,29 @@
+.Chat-main
+  .group-info
+    %ul.group-info__group-name
+      test
+      %li.group-info__member-list
+        Member：masa
+    .group-info__exit
+      = link_to "#" do
+        edit
+  .message-list
+    %ul.message-list__sender-name1
+      masa 
+      %span
+        2019/11/20(Wed) 17:43:01
+      %li.message-list__message1
+        おはよう！
+    %ul.message-list__sender-name2
+      masa 
+      %span
+        2019/11/20(Wed) 17:43:34
+      %li.message-list__message2
+        今日は夜から雨
+  .message-form
+    %form.input-box
+      %input.input-box__input-text{"placeholder": "type a message", "type": "text"}
+      %label.input-box__input-image
+        = icon('fas', 'image')
+        %input.input-box__input-file{"type": "file"}
+    %input.submit-btn{"name": "commit", "type": "submit", "value": "Send"}

@@ -1,0 +1,55 @@
+.Side-bar{
+  width: 300px;
+  background-color: #2f3e51;
+  &__user-name{
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+  }
+}
+.top-items{
+  height: 20px;
+  width: 260px;
+  margin: 0 20px;
+  background-color: #253141;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__name{
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  &__icons{
+    display: flex;
+    justify-content: end;
+  }
+  &__icon{
+    font-size: 16px;
+    padding-left: 5px;
+    a{
+      color: #ffffff;
+    }
+  }
+}
+.group-list{
+  background-color: #2f3e51;
+  padding: 0 20px;
+}
+.details{
+  a{
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  &__name{
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  &__message{
+    font-size: 11px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+  }
+}
