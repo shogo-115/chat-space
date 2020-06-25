@@ -8,16 +8,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    &__group-name{
-      color: #333333;
-      font-size: 20px;
-      margin-left: 40px;
-      padding-top: 35px;
-    }
-    &__member-list{
-      color: #999999;
-      margin-top: 15px;
-      font-size: 12px;
+    &__group{
+      &__group-name{
+        color: #333333;
+        font-size: 20px;
+        margin-left: 40px;
+        padding-top: 35px;
+      }
+      &__member-list{
+        color: #999999;
+        margin-top: 15px;
+        margin-left: 40px;
+        font-size: 12px;
+        display: flex;
+      }
+      &__member{
+      }
     }
     &__exit{
       border: 1px solid #38aef0;
@@ -30,47 +36,44 @@
       }
     }
   }
-  .message-list{
+  .message-field{
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
-    span{
-      color: #999999;
-      font-size: 12px;
+    .message-box{
+      .message-info{
+        display: flex;
+        &__sender-name{
+          color: #333333;
+          font-size: 16px;
+          margin-left: 40px;
+          padding-top: 35px;
+        }
+        &__date{
+          color: #999999;
+          font-size: 12px;
+          padding-top: 35px;
+          margin-left: 10px;
+        }
+      }
     }
-    &__sender-name1{
-      color: #333333;
-      font-size: 16px;
-      margin-left: 40px;
-      padding-top: 35px;
-
-    }
-    &__message1{
-      color: #434A54;
-      font-size: 14px;
-      padding-top: 12px;
-    }
-    &__sender-name2{
-      color: #333333;
-      font-size: 16px;
-      margin-left: 40px;
-      padding-top: 46px;
-    }
-    &__message2{
-      color: #434A54;
-      font-size: 14px;
-      padding-top: 12px;
-    }
+      .message{
+        color: #434A54;
+        font-size: 14px;
+        padding-top: 12px;
+        margin-left: 40px;
+      }
   }
   .message-form{
     height: 90px;
     background-color: #d2d2d2;
     padding: 20px 40px 20px 40px;
-    display: flex;
-    .input-box{
-      width: 100%;
+    .form{
       display: flex;
-      position: relative;
-      &__input-text{
+      &__contents{
+        width: 100%;
+        position: relative;
+      }
+      &__input-content{
         height: 50px;
         width: 100%;
         padding: 0 10px;
@@ -80,20 +83,20 @@
         position: absolute;
         right: 10px;
         top: 15px;
+        .hidden{
+          display: none;
+        }
       }
-      &__input-file{
-        display: none;
-      }
-    }
-    .submit-btn{
-      height: 50px;
-      width: 100px;
-      color: #ffffff;
-      background-color: #38aef0;
-      font-size: 16px;
-      padding: 0 30px;
-      margin-left: 15px;
+      &__submit{
+        height: 50px;
+        width: 100px;
+        color: #ffffff;
+        background-color: #38aef0;
+        font-size: 16px;
+        padding: 0 30px;
+        margin-left: 15px;
         border-style: none;
+      }
     }
   }
 }
