@@ -22,8 +22,6 @@
         font-size: 12px;
         display: flex;
       }
-      &__member{
-      }
     }
     &__exit{
       border: 1px solid #38aef0;
@@ -39,6 +37,7 @@
   .message-field{
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
+    overflow: scroll;
     .message-box{
       .message-info{
         display: flex;
